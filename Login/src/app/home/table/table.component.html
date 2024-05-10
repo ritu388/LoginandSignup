@@ -1,0 +1,27 @@
+<!-- <p>table works!</p> -->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email Id</th>
+        <th scope="col">Phone No</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of tableRecord">
+        <th scope="row">{{list?.id}}</th>
+        <td>{{list?.first_name}}</td>
+        <td>{{list?.last_name}}</td>
+        <td>{{list?.email}}</td>
+        <td>{{list?.phone}}</td>
+        <td>{{list?.create_date }}</td>
+      </tr>
+      <tr *ngIf="tableRecord.length === 0">
+        <span style="text-align: center;"> No Record</span>
+      </tr>
+    </tbody>
+  </table>
+
